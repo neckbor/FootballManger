@@ -11,8 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<FootballManagerContext>(options => 
-    options.UseSqlServer(connectionString => 
-        builder.Configuration.GetConnectionString("FootballManager")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FootballManager")));
 
 var app = builder.Build();
 

@@ -9,5 +9,7 @@ namespace FootballManager.Models
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<FootballAssociation> FootballAssociations { get; set; }
+
+        public FootballManagerContext(DbContextOptions options) : base(options) { }
     }
 }
